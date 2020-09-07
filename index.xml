@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science Portfolio on Taylor Sullivan</title>
+    <link>https://tvandaff.github.io/taylor_portfolio/</link>
+    <description>Recent content in Data Science Portfolio on Taylor Sullivan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jun 2020 10:58:08 -0400</lastBuildDate>
+    
+	<atom:link href="https://tvandaff.github.io/taylor_portfolio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project 1: The Predictive Power of Food Consumption</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-1/</link>
+      <pubDate>Mon, 01 Jun 2020 10:58:08 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-1/</guid>
+      <description>This research was designed to explore the intersection of food consumption and health outcomes in developing countries. This research analyzes foods divided into 32 categories: rice (in all forms except flour), bread (fresh bread and special bread), cheese (cheese and curd), and pasta products to name a few. Consumption rates from each category were gathered from The World Bank. The data for nutritional value was then gathered for each type of item in the category and the median of the individual food items was used to represent the category.</description>
+    </item>
+    
+    <item>
+      <title>Project 2: TELCO Analysis in Python</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-2/</link>
+      <pubDate>Thu, 01 Aug 2019 11:00:59 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-2/</guid>
+      <description>This project conducts an analysis of customer characteristics to determine which are the best predictors for tenure. Out of the many services the company offered, customers were most likely to continue utilizing TELCO services if they were enrolled in a phone or internet service.
+In this project I use univariate analysis to analyze the frequency counts of internet service and automatic payment methods. I then utilize bivariate analysis to conduct covariance analysis prior to building a model.</description>
+    </item>
+    
+    <item>
+      <title>Project 3: Vehicle Analysis in Tableau</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-3/</link>
+      <pubDate>Fri, 01 Mar 2019 11:13:32 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-3/</guid>
+      <description>For this project, I conducted a cross-comparison between Ford, Honda, Hyundai, and Toyota, analyzing their safety features, initial cost, and maintenance rating, fuel economy, resale value, and insurance costs. This analysis will allow a customer to determine which company they would like to purchase a car from based on the characteristics they value most.
+Despite the company’s criteria, which prioritized safety features, maintenance costs, and price in that order, I believe a more robust picture of the vehicles can be obtained when also considering my personal ordered criteria of fuel economy, insurance costs, and resale value.</description>
+    </item>
+    
+    <item>
+      <title>Project 4: Census Predictions in R</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-4/</link>
+      <pubDate>Fri, 01 Feb 2019 11:14:48 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-4/</guid>
+      <description>Linear Regression Model of Texas Census Data   First, I conducted a linear regression analysis for use in predicting the size of the population for the state selected, based on the Current Estimates Data dataset. I used tidyverse and dplyr packages to complete the project.
+I then cleaned the data	by removing the column names in the Texas dataframe with names(estimates) &amp;lt;- NULL function and then built a vector with the as.</description>
+    </item>
+    
+    <item>
+      <title>Project 5: 911 Emergency Analysis in Python</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-5/</link>
+      <pubDate>Tue, 01 Jan 2019 11:15:58 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-5/</guid>
+      <description>In this project, I analyzed the data with univariate analysis to determine that the dataset necessitated the following corrections:
+ From initial inspection, some features carry redundant information: Longitude, Latitude, Incident Location, Hundred Block Location; District/Sector and Zone/Beat Additionally, At Scene Time is missing many values For consistency&amp;rsquo;s sake, the OFFICERS_AT_SCENE feature should be altered in style to match the others Zone/Beats, Incident Type Group, Incident Type Subgroup, District/Sector, Event Clearance Group, Event Clearance Subgroup, Event Clearance Code should be changed into categories instead of a Strings/int64 CAD CDW ID, CAD Event Number, General Offense Number should be changed to strings instead of int64 The Census Tract feature max and 75% numbers seem extrordinarily high Remove NaN census observation  I then proceeded to clean the data:</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/contact/</guid>
+      <description>Follow me on these social media platforms.
+   Platform URL     YouTube: https://www.youtube.com/channel/UCxIrcHNV_pTfLRynppSyG4g/   Website: &amp;ldquo;https://tvandaff.github.io/taylor_portfolio&amp;quot;   LinkedIn: https://www.linkedin.com/in/-taylorsullivan/   GitHub: https://github.com/tvandaff    </description>
+    </item>
+    
+  </channel>
+</rss>
