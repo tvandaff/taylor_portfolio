@@ -59,6 +59,14 @@ I then cleaned the data	by removing the column names in the Texas dataframe with
       <description>In this project, I analyzed the data with univariate analysis to determine that the dataset necessitated the following corrections:
  From initial inspection, some features carry redundant information: Longitude, Latitude, Incident Location, Hundred Block Location; District/Sector and Zone/Beat Additionally, At Scene Time is missing many values For consistency&amp;rsquo;s sake, the OFFICERS_AT_SCENE feature should be altered in style to match the others Zone/Beats, Incident Type Group, Incident Type Subgroup, District/Sector, Event Clearance Group, Event Clearance Subgroup, Event Clearance Code should be changed into categories instead of a Strings/int64 CAD CDW ID, CAD Event Number, General Offense Number should be changed to strings instead of int64 The Census Tract feature max and 75% numbers seem extrordinarily high Remove NaN census observation  I then proceeded to clean the data:</description>
     </item>
+
+    <item>
+      <title>Project 6: Persona-lize</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-6/</link>
+      <pubDate>Tue, 10 May 2022 11:15:58 -0400</pubDate>
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-6/</guid>
+      <description>The Persona-Based Trip Planning App: A User Experience Project</description>
+    </item>
     
     <item>
       <title>Contact</title>
