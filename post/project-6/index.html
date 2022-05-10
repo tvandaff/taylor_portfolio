@@ -260,7 +260,40 @@
     </figure>
     <li>Prior to the trip planning decision loop, the user experiences feelings that prime them for a trip, they then rely on past experiences and prior information to narrow down locations, they then conduct individual research into the locations to motivate the process further before entering a collaborative process with other travelers they have invited on the trip. Each of the three contextual inquiries we conducted followed this sequence.</li>
     <p><b>Insight</b>: The sequence of trip planning moves from individual research and prioritization to collaborative discussion and decision-making.</p>
-    
+    <h3>Speed Dating</h3>
+    <p><b>Definition</b>: Speed dating involves presenting a participant with multiple low fidelity concepts/design ideas to validate user needs and gain insight into previously unseen user needs.</p>
+    <p><b>Motivation</b>: We used speed dating to understand whether the user needs we identified warranted a solution and to find the proper avenue of approach for that solution. </p>
+    <p><b>Recruitment</b>: Each team member recruited one participant from their network. All interviewed parties were between 20-26 years of age. </p>
+    <p><b>Method</b>: Each participant was presented with each of nine storyboards and asked key questions about the storyboard and the user need it aims to solve over the course of three-five minutes for a total interview time of 45-60 minutes. </p>
+    <p><b>Evidence</b>: </p>
+    <li>“I agree that arguments can be exhausting, but I think having a bot moderate the conversation would be way too intrusive” - U3</li>
+    <li>“I think this would be fun for the younger travelers on the trip, but would be exhausting to introduce to the older travelers” -U3 </li>
+    <li>“I&rsquo;m indecisive myself, and I&rsquo;ve had this argument before about where to go. I think this could be a fun and interesting way to generate discussion” - U2</li>
+    <p><b>Insights</b>:</p>
+    <li>Adding <i>additional tasks for the group to complete asynchronously</i> could be too much of a hassle if new technologies are introduced</li>
+    <li>Finding <i>common interests and resolving conflict can be tough in informal group planning</i>, especially when planning remotely. </li>
+    <h2>How the process could have gone with only a data scientist&rsquo;s perspective:</h2>
+    <p>To demonstrate how the traditional data scientist alone cannot replace the work of a user experience team, I developed a Latent Dirichlet Association model on the notes from our three contextual inquiries.</p>
+    <p>This is an unsupervised learning model that groups the text to generate topics/themes in a similar way to how the research team conducted affinity diagraming to generate insights from the conducted research. </p>
+    <p>I trained the model on the interview data using 10 passes over the data to generate 3 themes. The generated themes were as follows: </p>
+    <figure>
+      <img src="https://tvandaff.github.io/taylor_portfolio/images/sequencediagram.png"/> 
+    </figure>
+    <p>The following can be discerned from those topics:</p>
+    <ol>
+      <li>Location planning/Transportation</li>
+      <li>Unique culture</li>
+      <li>General trip planning </li>
+    </ol>
+    <p>Needless to say, the power of a generative statistical model is no match for the power of a user experience team. It is only through a multidisciplinary team and thorough research that we can glean the most authentic insights. </p>
+    <h2>Solution:</h2>
+    <figure>
+      <img src="https://tvandaff.github.io/taylor_portfolio/images/WireFrameFinal.png"/> 
+    </figure>
+    <p>We found that groups aim to align their individual and group personas with location-specific assets/advantages in the trip-planning process. We propose an interface in the above wireframe that nurtures the individual persona by guiding a user through a persona-lized research process, that nurtures the group persona that pairs common interests in a collaborative space, and that pairs these personas with a location-persona that best suits the needs of the group. </p>
+    <p>This virtual interface could expedite common decision-making tropes such as process of elimination, pairing of common interests, and more to build up these individual user profiles and common group profiles.</p>
+    <h2>Takeaways: </h2>
+    <p>Modeling (sequence diagraming, empathy mapping, etc.) and contextual inquiries offer the most gains in the user-centered research process by far. Surveys and prototyping can help gain minute insights for small feature adaptations, but contextual inquiries offer clear insights into user thought processes, pain points, and motivations in a short 60-minute window. Speed dating, however, while helpful, is very dependent on the users interviewed and the process used. If you do not have the speed dating script memorized and on hand or your user is a bit more lackadaisical, the whole process could be unnecessarily long and insightful. With this in mind, I would spend upwards of two weeks should be spent to carefully curate this script and run practice sessions in the future.   </p>
 <ul>
 <li></li>
 <li>From initial inspection, some features carry redundant information: Longitude, Latitude, Incident Location, Hundred Block Location; District/Sector and Zone/Beat</li>
