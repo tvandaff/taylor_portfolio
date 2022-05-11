@@ -295,42 +295,6 @@
     <h2>Takeaways: </h2>
     <p>Modeling (sequence diagraming, empathy mapping, etc.) and contextual inquiries offer the most gains in the user-centered research process by far. Surveys and prototyping can help gain minute insights for small feature adaptations, but contextual inquiries offer clear insights into user thought processes, pain points, and motivations in a short 60-minute window. Speed dating, however, while helpful, is very dependent on the users interviewed and the process used. If you do not have the speed dating script memorized and on hand or your user is a bit more lackadaisical, the whole process could be unnecessarily long and insightful. With this in mind, I would spend upwards of two weeks should be spent to carefully curate this script and run practice sessions in the future.   </p>
 <ul>
-<li></li>
-<li>From initial inspection, some features carry redundant information: Longitude, Latitude, Incident Location, Hundred Block Location; District/Sector and Zone/Beat</li>
-<li>Additionally, At Scene Time is missing many values</li>
-<li>For consistency&rsquo;s sake, the OFFICERS_AT_SCENE feature should be altered in style to match the others</li>
-<li>Zone/Beats, Incident Type Group, Incident Type Subgroup, District/Sector, Event Clearance Group, Event Clearance Subgroup, Event Clearance Code should be changed into categories instead of a Strings/int64</li>
-<li>CAD CDW ID, CAD Event Number, General Offense Number should be changed to strings instead of int64</li>
-<li>The Census Tract feature max and 75% numbers seem extrordinarily high</li>
-<li>Remove NaN census observation</li>
-</ul>
-<p>I then proceeded to clean the data:</p>
-<ul>
-<li>I removed redundant columns with drop()</li>
-<li>&lsquo;At Scene Time&rsquo; feature was missing 61.76% of the values, so the method I decided was most appropriate was to discard the feature</li>
-<li>I changed the all-caps variable to match the others with the rename() function</li>
-<li>I then corrected the variable types from strings an ints to categories where appropriate with the astype() function</li>
-<li>I removed the NaN census observation with dropna()</li>
-</ul>
-<p>I used a series of boxplots to examine the outliers and checked for a zscore over 3 to determine if outliers necessitated removal. None met this threshold, so none were removed.</p>
-<p>Next, I created a bar graph with Date Vs. Number of Events.</p>
-<figure>
-    <img src="https://tvandaff.github.io/taylor_portfolio/images/date911callanalysis.png"/> 
-</figure>
-
-<p>As is clear from the chart, there is a sharp uptick in crime on 3-26, followed by a marked leveling. This could be useful information when the police are attempting to increase staff on certain days to prepare for the incoming volume of calls and incidents.</p>
-<p>I then created a bar graph of number of incident occurrences by event type.</p>
-<figure>
-    <img src="https://tvandaff.github.io/taylor_portfolio/images/incidenttypes911callanalysis.png"/> 
-</figure>
-
-<p>What became clear from the chart was that Disturbances, Traffic Related Calls, and Suspicious Circumstances were the most frequent 911 call types. This can be useful when training the police department and selecting special areas of emphasis.</p>
-<p>Finally, I created a bar graph of Sectors vs. Number of Events.</p>
-<figure>
-    <img src="https://tvandaff.github.io/taylor_portfolio/images/911.png"/> 
-</figure>
-
-<p>Evidently, there was quite a lot more crime in District R than there is in District S. This result requires more information as to the underlying factors of high call rates in District R.</p>
 <p><a href="https://github.com/tvandaff/911_call_analysis">Link to GitHub Repository</a></p>
 <ul class="pa0">
   
