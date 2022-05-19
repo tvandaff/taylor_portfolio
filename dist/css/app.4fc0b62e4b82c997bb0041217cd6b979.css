@@ -418,12 +418,12 @@ input[type="url"],
 }
 
 /* * {margin: 0; padding: 0;}
-background: white; */
+background: white; 
+margin: 50px auto;*/
  
 #container {
  width: 800px;
  overflow: hidden;
- margin: 50px auto;
 }
 
 /*header*/
