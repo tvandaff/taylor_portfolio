@@ -472,11 +472,11 @@ header p {
 }
 /*keyframe animations*/
 .first {
- -webkit-animation: bannermove 130s linear infinite;
-    -moz-animation: bannermove 130s linear infinite;
-     -ms-animation: bannermove 130s linear infinite;
-      -o-animation: bannermove 130s linear infinite;
-         animation: bannermove 130s linear infinite;
+ -webkit-animation: bannermove 200s linear infinite;
+    -moz-animation: bannermove 200s linear infinite;
+     -ms-animation: bannermove 200s linear infinite;
+      -o-animation: bannermove 200s linear infinite;
+         animation: bannermove 200s linear infinite;
 }
  
 @keyframes bannermove {
