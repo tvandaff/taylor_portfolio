@@ -89,5 +89,41 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <url>
+    <loc>https://tvandaff.github.io/taylor_portfolio/tags/project-7/</loc>
+    <lastmod>2020-06-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://tvandaff.github.io/taylor_portfolio/tags/project-8/</loc>
+    <lastmod>2020-06-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://tvandaff.github.io/taylor_portfolio/tags/project-9/</loc>
+    <lastmod>2020-06-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://tvandaff.github.io/taylor_portfolio/tags/project-10/</loc>
+    <lastmod>2020-06-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://tvandaff.github.io/taylor_portfolio/tags/project-11/</loc>
+    <lastmod>2020-06-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   
 </urlset>
