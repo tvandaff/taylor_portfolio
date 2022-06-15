@@ -205,31 +205,31 @@
       <p>I decided to test out the functionality of Seldon Core for model deployment. I ran an example for demonstration purposes from my local machine. For this example, I used a movie recommendation model and served it user id queries, returning movie recommendations in response to each query. I installed Seldon in conjunction with Istio, but the lack of documentation on this relationship led me to abandon this partnership.</p>
       <p>I built the model using S2I or source to image, which packaged my custom python model into an image that was ready to be containerized. I deployed the image with Docker with simple tagging and pushing commands on my local machine.</p>
 <figure>
-    <img src="https://tvandaff.github.io/taylor_portfolio/images/SeldonDeployment.png"/> <figcaption>
+    <img src="https://tvandaff.github.io/taylor_portfolio/images/SeldonDeployment.PNG"/> <figcaption>
             <h4>Deployment yaml file executed from the command line</h4>
         </figcaption>
 </figure>
 <figure>
-  <img src="https://tvandaff.github.io/taylor_portfolio/images/s2ibuild.png"/> <figcaption>
+  <img src="https://tvandaff.github.io/taylor_portfolio/images/s2ibuild.PNG"/> <figcaption>
           <h4>An image for the Seldon Model with S2I within Ubuntu</h4>
       </figcaption> 
 </figure>
 <figure>
-  <img src="https://tvandaff.github.io/taylor_portfolio/images/docker_push.png"/> <figcaption>
+  <img src="https://tvandaff.github.io/taylor_portfolio/images/docker_push.PNG"/> <figcaption>
           <h4>Docker push command to deploy the Seldon image to my registry on Docker Hub</h4>
       </figcaption>
 </figure>
 
 <p>Once the model was deployed to my repository on Docker Hub, I ran the microservice locally through port 5000.</p>
 <figure>
-    <img src="https://tvandaff.github.io/taylor_portfolio/images/deployed_microservice.png"/> <figcaption>
+    <img src="https://tvandaff.github.io/taylor_portfolio/images/deployed_microservice.PNG"/> <figcaption>
             <h4>Deployment of the seldon image to a local microservice</h4>
         </figcaption>
 </figure>
 
 <p>From this point on I was able to curl my model and receive predictions with a given data input.</p>
 <figure>
-    <img src="https://tvandaff.github.io/taylor_portfolio/images/curl_command.png"/> <figcaption>
+    <img src="https://tvandaff.github.io/taylor_portfolio/images/curl_command.PNG"/> <figcaption>
             <h4>Curl the microservice endpoint to validate the functionality</h4>
         </figcaption>
 </figure>
