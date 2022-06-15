@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Project 1: The Predictive Power of Food Consumption | Taylor Sullivan</title>
+    <title>Project 1: Feature Engineering on the Cloud | Taylor Sullivan</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.71.0" />
     
@@ -26,14 +26,14 @@
 
     
     
-    <meta property="og:title" content="Project 1: The Predictive Power of Food Consumption" />
-<meta property="og:description" content="Food consumption rates are used to build a predictive model for non-communicable disease health outcomes in developing countries." />
+    <meta property="og:title" content="Project 1: Feature Engineering on the Cloud" />
+<meta property="og:description" content="Harnessing Google AI APIs and cloud resources to deploy an end-to-end taxi fare prediction application" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tvandaff.github.io/taylor_portfolio/post/project-1/" />
 <meta property="article:published_time" content="2020-06-01T10:58:08-04:00" />
 <meta property="article:modified_time" content="2020-06-01T10:58:08-04:00" />
-<meta itemprop="name" content="Project 1: The Predictive Power of Food Consumption">
-<meta itemprop="description" content="Food consumption rates are used to build a predictive model for non-communicable disease health outcomes in developing countries.">
+<meta itemprop="name" content="Project 1: Feature Engineering on the Cloud">
+<meta itemprop="description" content="Harnessing Google AI APIs and cloud resources to deploy an end-to-end taxi fare prediction application">
 <meta itemprop="datePublished" content="2020-06-01T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2020-06-01T10:58:08-04:00" />
 <meta itemprop="wordCount" content="522">
@@ -41,8 +41,8 @@
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Project 1: The Predictive Power of Food Consumption"/>
-<meta name="twitter:description" content="Food consumption rates are used to build a predictive model for non-communicable disease health outcomes in developing countries."/>
+<meta name="twitter:title" content="Project 1: Feature Engineering on the Cloud"/>
+<meta name="twitter:description" content="Harnessing Google AI APIs and cloud resources to deploy an end-to-end taxi fare prediction application"/>
 
 	
   </head>
@@ -140,10 +140,10 @@
 
       <div class="tc-l pv6 ph3 ph4-ns">
         
-          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project 1: The Predictive Power of Food Consumption</h1>
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project 1: Feature Engineering on the Cloud</h1>
           
             <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-              Food consumption rates are used to build a predictive model for non-communicable disease health outcomes in developing countries.
+              Harnessing Google AI APIs and cloud resources to deploy an end-to-end taxi fare prediction application
             </h2>
           
         
@@ -192,10 +192,10 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Project 1: The Predictive Power of Food Consumption</h1>
+      <h1 class="f1 athelas mt3 mb1">Project 1: Feature Engineering on the Cloud</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2020-06-01T10:58:08-04:00">June 1, 2020</time>
+      <time class="f6 mv4 dib tracked" datetime="2020-06-01T10:58:08-04:00">December 1, 2021</time>
 
       
       
@@ -205,11 +205,30 @@
   <iframe src="https://www.youtube.com/embed/fpg6ktRjD-0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<p>This research was designed to explore the intersection of food consumption and health outcomes in developing countries. This research analyzes foods divided into 32 categories: rice (in all forms except flour), bread (fresh bread and special bread), cheese (cheese and curd), and pasta products to name a few. Consumption rates from each category were gathered from The World Bank. The data for nutritional value was then gathered for each type of item in the category and the median of the individual food items was used to represent the category. Finally, the health outcomes for each developing country were gathered from the World Health Organization. The Health Outcomes and consumption rate datasets are from 2010 data, but the nutritional data, gathered from nutritionvalue.org, is 2020 data. This was a constraint on the accuracy of the results attained.</p>
-<p>In the end, the model that best fit the data was indeed the consumption rate, food category, and food category * consumption rate interaction for diabetes. The best fit for malignant neoplasms was the food category, consumption rate * carbohydrate interaction, and food category * consumption rate interaction. The best model for cardiovascular disease was carbohydrate, food category, the food consumption * carbohydrate interaction, and the food consumption * food category interaction. Finally, the best model for chronic obstructive pulmonary disease involved food consumption rate, the food consumption * fat interaction, the food consumption * protein interaction, and the food consumption * food category interaction. Ultimately nutrition facts, food categories, and consumption rates are excellent predictors for NCDs. Each of the models provides an accurate method for predicting rates of NCDs based on certain criteria.</p>
-<p>However, the data is limited by the confusion caused by using a smoothed weight of evidence to represent the food category variable. As a result of this fact, the data is difficult to interpret. Though, if the data was interpreted with this in mind, the model results can serve as an indicator for emerging nations to shift the focus of their markets to certain food groups that are not correlated with higher rates of NCDs.</p>
-<p>A main limitation of this analysis is the cumulative effect of limitations within each dataset. The food consumption rates are based on the consumption as best estimated by The World Bank. Accurate consumption rates were not available due to government entities failing to disclose, as well as the unavailability of rates due to informal markets. This combined with the fact that the median nutrition rates for each food category may not be the most accurate representation of the food category is a major constraint.</p>
-<p>In summary, there is clearly a significant relationship between food consumption rates, the categories of food being consumed, the nutrition facts of those foods, and the subsequent health outcomes. This relationship should be further analyzed with more data that analyzes specific food groups combined with finely tuned nutrition information. This would provide a better model that would assist the resourcing of developing nations. A more in-depth analysis of the specific areas within these countries that are consuming each food would be more useful for these purposes as well.</p>
+<p>To build an end-to-end application, I needed to approach this problem systematically. I began with the fare prediction model itself using Python and a Jupyter Notebook. I conducted EDA to examine the distribution of fares across the world as well as examine the features for outliers. After this, I moved onto feature engineering. Instead of using the raw datetime column, I created year, month, hour, and weekday columns to capture the importance of time on fare rates more accurately. I added an additional feature that calculated the haversine distance between start and end coordinates because distance is another important factor in fare calculation. For the training set, I removed training points outside of North America and fares outside of the 99th percentile. This was done to ensure extraneous data points would not create unexpected model results. Below is the function used to create the training dataset.</p>
+<figure>
+  <img src="https://tvandaff.github.io/taylor_portfolio/images/CloudFeatureEngineering.png"/> 
+</figure>
+<p>I trained the model using XGBoost's K-fold cross validation model. I determined the importance of each of the features using XGBoost's plot_importance function and adjusted my pre-processing steps to include only the most relevant features. After tuning the hyperparameters, I settled on a five-fold model without 'key', 'fare_amount', 'passenger_count', or 'pickup_datetime.' The fare_amount was the predicted variable, key was an id variable, and timestamp was reflected in the engineered features, but it was surprising that passenger_count did not significantly influence fares. Regardless, this model was optimized for Root of Mean Squared Error, achieving a 2.8 as opposed to figures above three for alternative feature combinations. The photo below shows the code used to train the XGBoost model and determine feature importance.</p>
+<figure>
+  <img src="https://tvandaff.github.io/taylor_portfolio/images/CloudFeatureImportance.png"/> 
+</figure>
+<p>To further optimize the model, I used Google Cloud Platform's (GCP) HyperTune service to benefit from Bayesian Optimization as the service uses a Grid Search method to determine the optimal hyperparameter values. The config.yaml file I used for this process can be seen in the photo below. </p>
+<figure>
+  <img src="https://tvandaff.github.io/taylor_portfolio/images/CloudConfig.png"/> 
+</figure>
+<p>I then deployed the model to an endpoint using GCP's AI Platform. Afterwards, I created a Flask application capable of receiving pickup_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude, passenger_count, and returning fare predictions. I then began work on the pipeline for the final application. See the image below for the pipeline overview.</p>
+<figure>
+  <img src="https://tvandaff.github.io/taylor_portfolio/images/CloudP42Pipeline.jpeg"/> 
+</figure>
+<p>I finished off the application by connecting it to GCP's vision, text-to-Speech, speech-to-text, directions, and namedEntities APIs to enable the user to submit images, sound bytes, locations, text, etc. to recieve predictions. The end result was a comprehensive application capable of extremely accurate predictions within the region it was trained (NYC). See below for an example API call, demonstrating how this functionality was integrated into the Flask Application</p>
+<figure>
+  <img src="https://tvandaff.github.io/taylor_portfolio/images/CloudAPICall.png"/> 
+</figure>
+<p>An additional file was necessary to gain access to each of the APIs. The following is an example from my clients directory, speech_to_text.py. </p>
+<figure>
+  <img src="https://tvandaff.github.io/taylor_portfolio/images/clouapiest.png"/> 
+</figure>
 <p><a href="https://github.com/tvandaff/NCDs_vs_food_consumption">Link to GitHub Repository</a></p>
 <ul class="pa0">
   
@@ -233,7 +252,7 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://tvandaff.github.io/taylor_portfolio" >
-    &copy;  Taylor Sullivan 2020 
+    &copy;  Taylor Sullivan 2022
   </a>
     <div>
 

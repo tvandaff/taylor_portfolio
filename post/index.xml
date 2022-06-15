@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Project 1: The Predictive Power of Food Consumption</title>
+      <title>Project 1: Feature Engineering on the Cloud</title>
       <link>https://tvandaff.github.io/taylor_portfolio/post/project-1/</link>
-      <pubDate>Mon, 01 Jun 2020 10:58:08 -0400</pubDate>
+      <pubDate>Mon, 01 December 2021 10:58:08 -0400</pubDate>
       
       <guid>https://tvandaff.github.io/taylor_portfolio/post/project-1/</guid>
-      <description>This research was designed to explore the intersection of food consumption and health outcomes in developing countries. This research analyzes foods divided into 32 categories: rice (in all forms except flour), bread (fresh bread and special bread), cheese (cheese and curd), and pasta products to name a few. Consumption rates from each category were gathered from The World Bank. The data for nutritional value was then gathered for each type of item in the category and the median of the individual food items was used to represent the category.</description>
+      <description>In this project, I harness Google AI APIs and cloud resources to deploy an end-to-end taxi fare prediction application capable of receivinf sound bytes, text, location information, and images to create accurate fare predictions for the NYC area.</description>
     </item>
     
     <item>
