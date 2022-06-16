@@ -201,7 +201,7 @@
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
-      <h2>Train Model</h2>
+      <h2>Training the Model</h2>
       <p> For this project, I used a dataset with various features necessary (or unnecessary) for determining whether to grant loans. I created an XGBClassifier trained on the dummy variable features and tuned using GridSearchCV. Once I achieved an accuracy of .756 on the test set, I was satisfied with the performance and moved on to measuring fairness.</p>
       <h2>Measuring Fairness</h2>
       <p>I first evaluated Anti-Classification with the model. For this metric, I first determines whether the datapoints are the same except for age and gender and then evaluate whether cases exist with differences in predictions. </p>
@@ -219,7 +219,7 @@
       
         <p><b>Separation Results:</b> To operationalize separation, I chose to calculate the false positive and false negative rates for each of the protected attributes. The discrepancies between group false positive and false negative rates are not as apparent across genders. However, in the age groups, there is much less separation in the false negative rate, than there is across the false positive rate, which was .07, .37, .13, and NaN for each of the respective age categories. Thus, we can conclusively say there is separation across the age category in the model.</p>
        
-        <h2>Improve Model Fairness</h2>
+        <h2>Improving Model Fairness</h2>
 
         <p><b>Anti-classification report:</b> In order to improve this metric, I decided to remove gender and age from the model training. This was the most obvious approach to remove consideration of these variables.
 
@@ -246,7 +246,7 @@
           <p>This carries over to minority groups as well. We do not want to only recommend movies which actors that share the viewer's race. This causes a lack of valuable diversity across viewers and lost opportunity for quality content that viewers would enjoy despite this difference. The harm of allocation in this case is that individuals who would have really enjoyed a movie made by people of a different race, are not recommended this movie and it never appears on their screen, causing them to lose out on this enjoyable experience. The harm of representation runs much deeper. Because movie recommendations are essentially segregated, racism and prejudice remain major undertones in society and children grow up with the concept of "othering" people of different races.</p>
           <p>I would also consider age as a protected attribute, but with children as an unprotected separate binary feature in the dataset. By keeping age protected, we can avoid recommending only brand new movies to younger generations and vice a versa, when generational diversity can be very valuable in terms of educational value and exposure to unique cinematic techniques. The harm of allocation in this case is similar to the aforementioned ones. Elderly people do not have access to fresh content because the movie recommendation system assumes they are only interested in decades-old content, and they miss out on being able to see the new movie they wanted to see. The harm of representation, however, is that this constant denial of fresh content to the elderly causes them to constantly remain "out of the loop," missing pop culture references and they grow to be outcasts in society, discarded as old relics.</p>
         </li>
-        <li> Five sources of bias:
+        <li><b>Five sources of bias:</b>
           <ol>
             <li><i>Skewed samples:</i> Skewed samples could occur if females primarily select romantic comedies in historical data that the company has collected. They rarely choose documentaries and the opposite is true for males. Most women choose romantic comedies but there are occasions in which they choose something else to watch. Skew can certainly be the case in movie recommendations because society encourages certain preferences based on gender and race, which is difficult to overcome.</li>
             <li><i>Tainted examples:</i> These examples occur from data poisoning, which happens when an attacker inserts false data into the model to distort predictions and reduce accuracy. This is a risk for movie recommendation companies. There are many competitors who would like to reduce the capabilities of Netflix, etc. by disabling their ability to generate good recommendations and thereby encouraging customers to use their streaming service instead. These attacks must be safeguarded against with the security protocols we learned about in lecture.</li>
