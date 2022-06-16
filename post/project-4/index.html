@@ -209,7 +209,42 @@
           <iframe src="https://www.youtube.com/embed/Ed7I0xQcyWI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
           <figcaption> <p>Overview of this project upon completion</p></figcaption>
         </div>
-<p><a href="https://github.com/tvandaff/census_predictions_texas">Link to GitHub Repository</a></p>
+      <h2>System Design</h2>
+      <figure>
+        <img src="https://tvandaff.github.io/taylor_portfolio/images/aieng.png"/> 
+    </figure>
+      <p>The high-level design consists of a microservice that reads from port 8082 of the host machine to collect unique user IDs, uses the user ID to generate custom input data, and then predict recommended movies using the generated data. The resulting predictions are processed and then served back.</p>
+        <p>To create our prediction service, we deployed a Flask application on the provided Ubuntu virtual machine. The service contains two primary component classes: a DataGenerator and Recommender System. These objects abstract away the underlying data generation and modeling computation (both training and inference) while preserving the overall service interfaces.</p>
+        <p>The DataGenerator object contains one or multiple DataProvider objects that provide data which will be used by the model to perform its prediction. Data Providers can provide data that is either specific to the input user ID or general statistics aggregated over multiple users. The DataGenerator object then processes the data collected from multiple Data Providers into model-readable features.</p>
+          <p>The Recommender System object is the primary workhorse of our system and takes a user ID and generated features to: perform predictions on recommended movies and to process the resulting prediction into the service’s final response. Each Recommender System contains a Recommender Model object which supports a predict method that is parameterized by: uid, features. We design the Recommender Model an abstract class which allows us to implement, hotswap, and evaluate multiple models while preserving the overall interfaces between the Recommender System and the rest of the service.</p>
+            <p>We store aggregated statistics and model weights as pickle files on our VM that can be loaded on- demand by DataProviders and RecommenderModels. This allows us to update these statistics and model weight files without needing to change any of the code for the service at-large. </p>
+      <h2>Microservices</h2>
+      <p>To support automated model deployment we separate the model inference services from the load balancing main service. In our new pipeline, the main service checks if there are any available model services being served in the range of ports from 8000 to 8080. If there is an available model, the main service forwards the user ID query to the selected model. Model services can be launched with any of the models we created using our Recommendation System model wrapper interface (i.e. we can easily swap an SVD based model for a clustering based model).</p>
+      <p>To perform load balancing, we randomly select the target model from the available models in the range of ports. In the case where no model service is available, the main service has a fallback model based on Most Watched movies as a fail safe. We log the model used for prediction for use in AB testing and evaluations. To distribute the traffic to the various model services in a live AB experiment we split the requests according to their user ID modulo the number of serving models at a given point.</p>
+      <p>The model inference and load balancing services were containerized using Docker images. The images contain the service directory of the project and are built from the base python3.8 image with the installation of python libraries from the requirements.txt. The docker images are created daily using a crontab that locally refreshes the main_service:latest image on the VM. Links to the: crontab and Dockerfile. The docker images are also automatically rebuilt as part of the Jenkins pipeline on commit to the master branch.</p>
+      <h2>Continuous Integration/Continuous Deployment</h2>
+      <p>We achieve automation on continuous data collection and automatic model retraining by wrapping all necessary steps into one continuous script, with multiple parameters on retraining intervals, conditions to trigger updates, and model-relevant ones readily modifiable in a specific configuration file.</p>
+      <ol>
+        <li><b>Continuous data collection:</b> We keep the kafka consumer running, extract useful information (specifically ratings, with regards to model training) and save it incrementally under the “data/medium” folder, each one marked with time stamps.</li>
+        <li><b>Automatic model retraining:</b> When retraining conditions are satisfied (at least 20 new datasets are added and the last model was trained 12 hours ago, in the current setting), we retrain a new model on all datasets collected, which generates a versioning id based on the timestamp of creation, for provenance needs. </li>
+        <li>Model and codes update check: When a new model is trained with more data, it does not always have a better performance, so recklessly pushing new models into services is risky. We deploy the new model only if it has a higher recall than the current one. (codes) We also detect if the current model is trained with a different architecture by comparing python files in use and the saved checkpoints of the last model. If so, we save a copy of the latest codes and record that into model metadata.</li>
+        <li>Automatic model deployment: As we update and retrain models, they are written to a “latest/” model directory for each model type. The model inference service for each of our served model types (standalone Top-K and clustering-based Top-K) is continuously served within Docker containers with publicly exposed ports which are accessible from the main service. Each of these services (currently standalone TopK and clustering-based TopK) is run within Docker containers that are mounted to the local filesystem on our “model/” and “data/” directories which allow the already running service to be exposed to the files for loading the latest models.</li>
+      </ol>
+      <h2>Data</h2>
+      <p>Our data, much like other teams, comes from three major sources: Kafka stream, User API, and Movie API. Though we initially attempted to pull other existing movie recommendation datasets for training, we decided against it for consistency purposes. As such, we pulled logs from the kafka stream to gather user-movie interactions (in the form of watch-history, and rate-history) and used the collected user-ids and movie-ids to then fetch user-data and movie-data. Although, as we’ll see later, we only ended up using the user-movie data for training purposes. As of M2, we also integrated a complex data quality check into our pipeline that rejected all entries that didn’t follow an expected format. </p>
+      <h2>Models</h2>
+      <p>Over the course of the project, we trained 4 models. Two simple ones and two that were a bit more complex. The results (as we will see later, are quite interesting). Two of our simple models were the top-k watched and top-k rated models. Here, we stored the top 50 most watched and highest rated movies, the ratings were, of course, normalized by watch count, and we sampled 20 movies out of the 50 each time a recommendation request came in. This brought in an element of stochasticity in our recommendations and allowed the user to “explore” to an extent. Both of these were very simple to train and implement, and had very low inference time. They also had mediocre performance.</p>
+      <p>The more complex models we trained employed matrix factorization. The base MF model was simply trained to predict the rating for a movie for an incoming user query, while the Clustering model was a multi-step process. We first captured user-latent features using the same matrix factorization, clustered them on this basis into 20 clusters and found the highest rated movies for each cluster. During inference, we would predict the cluster for the user, and then sample from that cluster’s set of top rated movies. Of the two, we only ended up deploying the clustering model. Both of these, however, had high inference time, were relatively expensive to train, and still - gave mediocre performance. Not the greatest tradeoff. </p>
+      <h2>Monitoring</h2>   
+      <p>For monitoring our models, and specifically focusing on online evaluation here, we focused on 4 key metrics (though we had others as well, these were of most importance). For model quality, Hit-Rate - What fraction of times a user watched one of our recommendations?, Recall - How many of our recommendations were watched?, average latency - How long did it take for the system to respond to a user?, and success rate- What fraction of total requests did we successfully respond to? </p>   
+      <p>A/B testing was done using the same metrics, and we conducted a significance test every time we had a set of 100 scores for each A or B.</p>
+      <p>As of our third milestone, we also integrated a monitoring dashboard service - Aporia. This tool was quite easy to set up, had some good features like data and model drift tracking - but to be fair, didn’t have the nicest of user-interfaces. The process of getting from the homepage to a particular graph was harder than it needed to be.</p>
+      <h2>Results</h2>
+      <figure>
+        <img src="https://tvandaff.github.io/taylor_portfolio/images/stats.png"/> 
+    </figure>
+      <p>We were proud of the metrics we were able to achieve in the visual above, but see the video footage for commentary on what areas we can improve on to reduce these metrics further. </p>
+      <p><a href="https://github.com/cmu-seai/group-project-s22-team-7">Link to GitHub Repository</a></p>
 <ul class="pa0">
   
 </ul>
@@ -232,7 +267,7 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://tvandaff.github.io/taylor_portfolio" >
-    &copy;  Taylor Sullivan 2020 
+    &copy;  Taylor Sullivan 2022
   </a>
     <div>
 
