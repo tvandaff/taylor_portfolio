@@ -40,13 +40,12 @@ Despite the company’s criteria, which prioritized safety features, maintenance
     </item>
     
     <item>
-      <title>Project 4: Census Predictions in R</title>
+      <title>Project 4: AI Engineering</title>
       <link>https://tvandaff.github.io/taylor_portfolio/post/project-4/</link>
-      <pubDate>Fri, 01 Feb 2019 11:14:48 -0400</pubDate>
+      <pubDate>Fri, 10 May 2022 11:14:48 -0400</pubDate>
       
       <guid>https://tvandaff.github.io/taylor_portfolio/post/project-4/</guid>
-      <description>Linear Regression Model of Texas Census Data   First, I conducted a linear regression analysis for use in predicting the size of the population for the state selected, based on the Current Estimates Data dataset. I used tidyverse and dplyr packages to complete the project.
-I then cleaned the data	by removing the column names in the Texas dataframe with names(estimates) &amp;lt;- NULL function and then built a vector with the as.</description>
+      <description> In this project, my team and I implemented, evaluated, operated, monitored, and evolved a recommendation service for a movie streaming service scenario. My team and I developed a streaming service capable of traffic from 1 million customers and hosting 27k movies.</description>
     </item>
     
     <item>
