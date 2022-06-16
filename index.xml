@@ -6,7 +6,7 @@
     <description>Recent content in Data Science Portfolio on Taylor Sullivan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2020 10:58:08 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2022 10:58:08 -0400</lastBuildDate>
     
 	<atom:link href="https://tvandaff.github.io/taylor_portfolio/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,17 +17,16 @@
       <pubDate>Mon, 01 Dec 2021 10:58:08 -0400</pubDate>
       
       <guid>https://tvandaff.github.io/taylor_portfolio/post/project-1/</guid>
-      <description>In this project, I harness Google AI APIs and cloud resources to deploy an end-to-end taxi fare prediction application capable of receivinf sound bytes, text, location information, and images to create accurate fare predictions for the NYC area.</description>
+      <description>Online consumers are overwhelmed by an increasing number of product options and a seemingly endless amount of available information. As a result, consumers must sort through countless product features to discover the criteria pertinent to their user needs and the context in which they plan to use the product. This is a tedious task that can elongate the shopping process by several hours. Though there are multiple systems designed to filter and group reviews with precompiled, or user-defined, keywords, currently an application capable of filtering reviews by user needs or contexts does not exist. Therefore, we propose an end-to-end system, which utilizes state-of-the-art Natural Language Processing techniques to extract user contexts and criteria from reviews, performs clustering and presents popular user contexts and important criteria for each context to incoming users. Our system supports review filtering based on user-selected contexts and/or criteria. We have validated our system with interview-style user studies to determine its potential educational value and helpfulness.</description>
     </item>
     
     <item>
-      <title>Project 2: TELCO Analysis in Python</title>
+      <title>Project 2:  Movie Recommendations with Seldon</title>
       <link>https://tvandaff.github.io/taylor_portfolio/post/project-2/</link>
-      <pubDate>Thu, 01 Aug 2019 11:00:59 -0400</pubDate>
+      <pubDate>Thu, 01 Apr 2022 11:00:59 -0400</pubDate>
       
       <guid>https://tvandaff.github.io/taylor_portfolio/post/project-2/</guid>
-      <description>This project conducts an analysis of customer characteristics to determine which are the best predictors for tenure. Out of the many services the company offered, customers were most likely to continue utilizing TELCO services if they were enrolled in a phone or internet service.
-In this project I use univariate analysis to analyze the frequency counts of internet service and automatic payment methods. I then utilize bivariate analysis to conduct covariance analysis prior to building a model.</description>
+      <description>This project showcases Seldon as a useful tool for building AI-enabled systems. I utilized Seldon in the context of the movie streaming scenario to demonstrate its capabilities as a model deployment service.</description>
     </item>
     
     <item>
@@ -51,13 +50,12 @@ I then cleaned the data	by removing the column names in the Texas dataframe with
     </item>
     
     <item>
-      <title>Project 5: 911 Emergency Analysis in Python</title>
+      <title>Project 5: Predicting User Contexts in Product Reviews</title>
       <link>https://tvandaff.github.io/taylor_portfolio/post/project-5/</link>
-      <pubDate>Tue, 01 Jan 2019 11:15:58 -0400</pubDate>
+      <pubDate>Tue, 01 Jan 2021 11:15:58 -0400</pubDate>
       
       <guid>https://tvandaff.github.io/taylor_portfolio/post/project-5/</guid>
-      <description>In this project, I analyzed the data with univariate analysis to determine that the dataset necessitated the following corrections:
- From initial inspection, some features carry redundant information: Longitude, Latitude, Incident Location, Hundred Block Location; District/Sector and Zone/Beat Additionally, At Scene Time is missing many values For consistency&amp;rsquo;s sake, the OFFICERS_AT_SCENE feature should be altered in style to match the others Zone/Beats, Incident Type Group, Incident Type Subgroup, District/Sector, Event Clearance Group, Event Clearance Subgroup, Event Clearance Code should be changed into categories instead of a Strings/int64 CAD CDW ID, CAD Event Number, General Offense Number should be changed to strings instead of int64 The Census Tract feature max and 75% numbers seem extrordinarily high Remove NaN census observation  I then proceeded to clean the data:</description>
+      <description>Online consumers are overwhelmed by an increasing number of product options and a seemingly endless amount of available information. As a result, consumers must sort through countless product features to discover the criteria pertinent to their user needs and the context in which they plan to use the product. This is a tedious task that can elongate the shopping process by several hours. Though there are multiple systems designed to filter and group reviews with precompiled, or user-defined, keywords, currently an application capable of filtering reviews by user needs or contexts does not exist. Therefore, we propose an end-to-end system, which utilizes state-of-the-art Natural Language Processing techniques to extract user contexts and criteria from reviews, performs clustering and presents popular user contexts and important criteria for each context to incoming users. Our system supports review filtering based on user-selected contexts and/or criteria. We have validated our system with interview-style user studies to determine its potential educational value and helpfulness.</description>
     </item>
 
     <item>
@@ -66,6 +64,55 @@ I then cleaned the data	by removing the column names in the Texas dataframe with
       <pubDate>Tue, 10 May 2022 11:15:58 -0400</pubDate>
       <guid>https://tvandaff.github.io/taylor_portfolio/post/project-6/</guid>
       <description>The Persona-Based Trip Planning App: A User Experience Project</description>
+    </item>
+
+    <item>
+      <title>Project 7: The Predictive Power of Food Consumption</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-7/</link>
+      <pubDate>Mon, 01 Jun 2020 10:58:08 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-7/</guid>
+      <description>This research was designed to explore the intersection of food consumption and health outcomes in developing countries. This research analyzes foods divided into 32 categories: rice (in all forms except flour), bread (fresh bread and special bread), cheese (cheese and curd), and pasta products to name a few. Consumption rates from each category were gathered from The World Bank. The data for nutritional value was then gathered for each type of item in the category and the median of the individual food items was used to represent the category.</description>
+    </item>
+    
+    <item>
+      <title>Project 8: TELCO Analysis in Python</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-8/</link>
+      <pubDate>Thu, 01 Aug 2019 11:00:59 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-8/</guid>
+      <description>This project conducts an analysis of customer characteristics to determine which are the best predictors for tenure. Out of the many services the company offered, customers were most likely to continue utilizing TELCO services if they were enrolled in a phone or internet service.
+In this project I use univariate analysis to analyze the frequency counts of internet service and automatic payment methods. I then utilize bivariate analysis to conduct covariance analysis prior to building a model.</description>
+    </item>
+    
+    <item>
+      <title>Project 9: Vehicle Analysis in Tableau</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-9/</link>
+      <pubDate>Fri, 01 Mar 2019 11:13:32 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-9/</guid>
+      <description>For this project, I conducted a cross-comparison between Ford, Honda, Hyundai, and Toyota, analyzing their safety features, initial cost, and maintenance rating, fuel economy, resale value, and insurance costs. This analysis will allow a customer to determine which company they would like to purchase a car from based on the characteristics they value most.
+Despite the company’s criteria, which prioritized safety features, maintenance costs, and price in that order, I believe a more robust picture of the vehicles can be obtained when also considering my personal ordered criteria of fuel economy, insurance costs, and resale value.</description>
+    </item>
+    
+    <item>
+      <title>Project 10: Census Predictions in R</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-10/</link>
+      <pubDate>Fri, 01 Feb 2019 11:14:48 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-10/</guid>
+      <description>Linear Regression Model of Texas Census Data   First, I conducted a linear regression analysis for use in predicting the size of the population for the state selected, based on the Current Estimates Data dataset. I used tidyverse and dplyr packages to complete the project.
+I then cleaned the data	by removing the column names in the Texas dataframe with names(estimates) &amp;lt;- NULL function and then built a vector with the as.</description>
+    </item>
+    
+    <item>
+      <title>Project 11: 911 Emergency Analysis in Python</title>
+      <link>https://tvandaff.github.io/taylor_portfolio/post/project-11/</link>
+      <pubDate>Tue, 01 Jan 2019 11:15:58 -0400</pubDate>
+      
+      <guid>https://tvandaff.github.io/taylor_portfolio/post/project-11/</guid>
+      <description>In this project, I analyzed the data with univariate analysis to determine that the dataset necessitated the following corrections:
+ From initial inspection, some features carry redundant information: Longitude, Latitude, Incident Location, Hundred Block Location; District/Sector and Zone/Beat Additionally, At Scene Time is missing many values For consistency&amp;rsquo;s sake, the OFFICERS_AT_SCENE feature should be altered in style to match the others Zone/Beats, Incident Type Group, Incident Type Subgroup, District/Sector, Event Clearance Group, Event Clearance Subgroup, Event Clearance Code should be changed into categories instead of a Strings/int64 CAD CDW ID, CAD Event Number, General Offense Number should be changed to strings instead of int64 The Census Tract feature max and 75% numbers seem extrordinarily high Remove NaN census observation  I then proceeded to clean the data:</description>
     </item>
     
     <item>
